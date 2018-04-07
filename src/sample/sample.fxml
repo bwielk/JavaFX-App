@@ -5,10 +5,23 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.text.Font?>
 <GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Label text = "Welcome to JavaFX" textFill="maroon">
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center"
+          hgap="5"
+          vgap="10"
+          gridLinesVisible="true">
+    <Label text = "Welcome to JavaFX" textFill="maroon" GridPane.rowSpan="1" >
         <font>
             <Font name = "Arial bold" size = "50"></Font>
         </font>
     </Label>
+    <Button text="Button One" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Button Two" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+    <Button text="Button Four" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+    <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Button text="Button Six" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Button text="Button Seven" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <Button text="Button Eight" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+    <Button text="Button Nine" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
 </GridPane>

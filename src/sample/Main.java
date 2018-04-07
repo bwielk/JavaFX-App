@@ -22,7 +22,7 @@ public class Main extends Application {
 //        root.setVgap(20);
 //        root.setHgap(20);
         primaryStage.setTitle("My First Ever Application in JavaFX");
-        primaryStage.setScene(new Scene(root, 500, 275));
+        primaryStage.setScene(new Scene(root, 500, 500));
 
 //        Label greeting = new Label("Welcome to JavaFX");
 //        greeting.setTextFill(Color.GREEN);
