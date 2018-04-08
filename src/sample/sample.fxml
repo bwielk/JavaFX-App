@@ -6,6 +6,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.BorderPane?>
 
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.StackPane?>
 <BorderPane fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml">
     <top>
@@ -36,10 +39,35 @@
         <Button text="Button Nine" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
     </GridPane>
     </top>
+    <left>
+        <VBox  style="-fx-border-color: green; -fx-border-width: 5; -fx-border-style: solid">
+            <Label text="Left hand side position" alignment="CENTER"/>
+            <Button text="Left 1"/>
+            <Button text="Left 2"/>
+            <Button text="Left 3"/>
+        </VBox>
+    </left>
+    <right>
+        <Label text="Right hand side position" alignment="CENTER"
+               style="-fx-border-color: orange; -fx-border-width: 5; -fx-border-style: solid" />
+        <TilePane>
+            <Label text="Right hand side position" alignment="CENTER"/>
+            <Button text="Right 1"/>
+            <Button text="Right 2"/>
+            <Button text="Right 3"/>
+            <Button text="Right 4"/>
+        </TilePane>
+    </right>
     <center>
         <Label text="Center of the BorderPane"
                alignment = "center"
                style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dotted"/>
+        <StackPane style="-fx-background-color: pink; -fx-border-width: 4; -fx-border-style: dashed">
+            <Label text="Stack Pane sample"/>
+            <Button text="Button Center 1" style="-fx-border-color: red; -fx-border-width: 15; -fx-border-style: solid"/>
+            <Button text="Button Center 2" style="-fx-border-color: black; -fx-border-width: 10; -fx-border-style: solid"/>
+            <Button text="Button Center 3" style="-fx-border-color: blue; -fx-border-width: 5; -fx-border-style: solid"/>
+        </StackPane>
     </center>
     <bottom>
         <HBox xmlns:fx="http://javafx.com/fxml"
