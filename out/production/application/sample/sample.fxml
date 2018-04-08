@@ -1,53 +1,63 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.HBox?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml"
-          alignment="top_center"
-          hgap="5"
-          vgap="10"
-          gridLinesVisible="true">
-    <Label text = "GridPane demo" textFill="maroon" GridPane.columnSpan="4" GridPane.halignment="CENTER">
-        <font>
-            <Font name = "Arial bold" size = "20"></Font>
-        </font>
-    </Label>
-    <!--<columnConstraints>&ndash;&gt;-->
-        <!--<ColumnConstraints percentWidth="10.0"/>-->
-        <!--<ColumnConstraints percentWidth="10.0"/>-->
-    <!--</columnConstraints>-->
-    <padding>
-        <Insets top="20"/>
-    </padding>
-    <Button text="Button One" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <Button text="Button Two" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-    <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
-    <Button text="Button Four" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
-    <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <Button text="Button Six" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-    <Button text="Button Seven" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
-    <Button text="Button Eight" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
-    <Button text="Button Nine" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-    <HBox xmlns:fx="http://javafx.com/fxml"
-          alignment="top_center"
-          GridPane.rowIndex="4"
-          GridPane.columnSpan="4" style="-fx-border-color: red; -fx-border-width: 4; -fx-border-style: dashed">
-        <padding>
-            <Insets top="100"/>
-        </padding>
-        <Label text = "Hbox layout">
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+    <GridPane alignment="top_center"
+              hgap="5"
+              vgap="10"
+              gridLinesVisible="true">
+        <Label text = "GridPane demo" textFill="maroon" GridPane.columnSpan="4" GridPane.halignment="CENTER">
             <font>
-                <Font name = "Arial bold"/>
+                <Font name = "Arial bold" size = "20"></Font>
             </font>
         </Label>
-        <Button text = "HBox Button 1"/>
-        <Button text = "Hbox Button 2"/>
-        <Button text = "Hbox Button 3"/>
-
-    </HBox>
-</GridPane>
+        <!--<columnConstraints>&ndash;&gt;-->
+        <!--<ColumnConstraints percentWidth="10.0"/>-->
+        <!--<ColumnConstraints percentWidth="10.0"/>-->
+        <!--</columnConstraints>-->
+        <padding>
+            <Insets top="20"/>
+        </padding>
+        <Button text="Button One" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Button text="Button Two" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Button text="Button Four" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+        <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Button text="Button Six" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Button text="Button Seven" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+        <Button text="Button Eight" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+        <Button text="Button Nine" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    </GridPane>
+    </top>
+    <center>
+        <Label text="Center of the BorderPane"
+               alignment = "center"
+               style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dotted"/>
+    </center>
+    <bottom>
+        <HBox xmlns:fx="http://javafx.com/fxml"
+              alignment="top_center"
+              GridPane.rowIndex="4"
+              GridPane.columnSpan="4" style="-fx-border-color: red; -fx-border-width: 4; -fx-border-style: dashed"
+              spacing="10">
+            <padding>
+                <Insets top="100"/>
+            </padding>
+            <Label text = "Hbox layout demo" alignment="top_center">
+                <font>
+                    <Font name = "Arial bold"/>
+                </font>
+            </Label>
+            <Button text = "HBox Button 1" prefWidth="120"/>
+            <Button text = "Hbox Button 2" prefWidth="110"/>
+            <Button text = "Hbox Button 3" prefWidth="90"/>
+        </HBox>
+    </bottom>
+</BorderPane>
